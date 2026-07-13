@@ -1,4 +1,4 @@
-package Atividades;
+package Atividades.Atividades1;
 
 import java.util.Scanner;
 /*Objetivo: Simular o sistema de faturação de uma loja.
