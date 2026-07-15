@@ -19,7 +19,11 @@ public class SistemaCofreDigital {
 
     public static void abrirCofre(Scanner scanner) {
         int i = 1; // Começa na primeira tentativa;
+
+
         while (i <= 5) {
+            System.out.println("Digite o código de acesso: ");
+
             String codigo = scanner.nextLine(); //Vai ler a senha;
             //equals le o conteudo da String e compara com o input do usuario
             if(codigo.equals("9999")){
@@ -34,6 +38,7 @@ public class SistemaCofreDigital {
                     System.out.println("Cofre bloqueado!");
                 }
             }
+
             i++; //Incrementa uma tentativa;
         }
 
