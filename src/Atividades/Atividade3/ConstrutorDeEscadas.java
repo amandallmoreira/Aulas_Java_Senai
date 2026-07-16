@@ -13,7 +13,27 @@ public class ConstrutorDeEscadas {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+
+        System.out.println("Digite quantos degraus sua escada deve ter: ");
         int degraus = scanner.nextInt();
+
         char simbolo = '#';
+
+        desenharEscada(degraus,simbolo);
+
     }
+
+    public static void desenharEscada(int degraus, char simbolo) {
+
+        //Laço que controla as LINHAS
+        for(int linha=1; linha<=degraus; linha++){
+            //Controla as colunas / SIMBOLOS
+            for(int coluna = 1; coluna<=linha; coluna++){
+                    System.out.print(simbolo); //Não pode ser println pois pula linha
+                }
+                System.out.println(); //Pula a linha
+        }
+
+    }
+
 }
