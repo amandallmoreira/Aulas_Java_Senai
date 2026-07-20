@@ -1,5 +1,6 @@
 package Atividades.Atividades4;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /*
@@ -25,17 +26,30 @@ public class AnalisadorTemperaturas {
 
         Scanner scanner = new Scanner(System.in);
 
-        double[] temperatura = new double[6];
+        double[] temperatura = new double[6]; //array de double
 
-        for(int i = 0; i<6; i++){
-            System.out.println("Digite a temperatura: ");
+        for (int i = 0; i < 6; i++) {
+            System.out.println("Digite a " + (i+1) + "ª temperatura: ");
             temperatura[i] = scanner.nextDouble();
-
-            if(temperatura<)
         }
 
+        double maior = temperatura[0]; //primeiro item da lista
+        double menor = temperatura[0];
 
+        for (int i = 1; i < 6; i++) { //Não pode começar em 0, pois não pode começar comparando a temperatura consigo mesma
+            // i: Só guarda a posição do item, não o valor dele
+            if (maior <= temperatura[i]) { // temperatura[i]: o que está dentro do vetor, naquela posição
+                maior = temperatura[i]; //Salva o valor do vetor
+            }
+            if (menor >= temperatura[i]) {
+                menor = temperatura[i];
+            }
 
+        }
+
+        System.out.println("Temperaturas: " + Arrays.toString(temperatura));
+        System.out.println("Maior temperatura: " + maior + "°C");
+        System.out.println("Menor temperatura: " + menor + "°C");
 
 
     }
